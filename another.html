@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>To-Do List</title>
+  </head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <body>
+    <h1>To-Do List</h1>
+    <input type="text" id="input" placeholder="Enter task" />
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"></ul>
+     </body>
+    <script>
+      let taskList = document.getElementById("taskList");
+let input = document.getElementById("input");
+
+function addTask() {
+  // create new list item
+  let li = document.createElement("li");
+
+  // add text to list item
+  li.appendChild(document.createTextNode(input.value));
+
+  // add strike button
+  let strikeBtn = document.createElement("button");
+  strikeBtn.appendChild(document.createTextNode("Strike"));
+  strikeBtn.addEventListener("click", function () {
+    li.classList.toggle("strike");
+  });
+  li.appendChild(strikeBtn);
+
+  // add delete button
+  let deleteBtn = document.createElement("button");
+  deleteBtn.appendChild(document.createTextNode("Delete"));
+  deleteBtn.addEventListener("click", function () {
+    taskList.removeChild(li);
+  });
+  li.appendChild(deleteBtn);
+
+  // add list item to list
+  taskList.appendChild(li);
+
+  // clear input
+  input.value = "";
+}
+    </script>
+  
+</html>

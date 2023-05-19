@@ -1,0 +1,38 @@
+ body {
+  background-image: url('Listt.png');
+  background-size: cover; 
+    font-family:sans-serif;
+          }
+
+.container {
+  border: 4px solid black;
+  padding: 10px;
+  width: 60px;
+  margin: auto;
+  border: 3px solid #73AD21;
+  }
+
+
+.form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+.form label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+ .strike{
+  text-decoration: line-through;
+}
+
+.form button:hover {
+  background-color: #45a049;
+}
